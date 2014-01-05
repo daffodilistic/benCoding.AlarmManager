@@ -5,7 +5,7 @@ The benCoding.AlarmManager module enables you to use the native Android AlarmMan
 This project can be found on github at [https://github.com/benbahrenburg/benCoding.AlarmManager](https://github.com/benbahrenburg/benCoding.AlarmManager)
 
 <h2>Before you start</h2>
-* This is an Android module designed to work with Titanium SDK 3.0.2 or greater.
+* This is an Android module designed to work with Titanium SDK 3.2.0 or greater.
 * Before getting start please note you need to compile this module yourself
 
 <h2>Building from source</h2>
@@ -60,6 +60,7 @@ You can create an AlarmNotification using the below properties:
 * <b>showLights</b> (Optional) (bool) Activate notification lights on device when alarm triggered.
 * <b>icon</b> - (Optional)The icon of the notification, this can be a system icon or resource included path
 * <b>repeat</b> - (Optional) (int) Used to schedule a repeating alarm. You can provide a millisecond value or use the words hourly, daily, monthly, yearly.
+* <b>rootActivity</b> - (Optional) (string) Used to specify to which activity (which name is concatenation id from tiapp.xml with the name of activity from manifest file) routes your notification. Using of this property resolves bug: "No valid root or current activity found for application instance"
 
 Please note if you omit the day, month, and year parameters the module will assume you mean to make the alarm effective from the current time If second is provided, alarm will be set to now plus the number of seconds provided; if minute is provided, alarm will be set for now plus the number of minutes provided.
 
@@ -201,6 +202,7 @@ alarmManager.addAlarmService({
 	hour: now.getHours(),
 	minute: now.getMinutes() + 2, //Set the number of minutes until the alarm should go off
 	repeat:'daily' //You can use the words hourly,daily,weekly,monthly,yearly or you can provide milliseconds.
+	rootActivity:'com.appworkbench.alarmtest.AlarmtestActivity' //You can specify ro which rootActivity notification rootes
 });	
 var ew8 = Ti.UI.createAlertDialog({
 	title:'Info', message:"You should see your alarm notification in about 2 minutes & repeat each day",

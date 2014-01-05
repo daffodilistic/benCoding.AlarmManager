@@ -101,6 +101,10 @@ public class AlarmManagerProxy extends KrollProxy {
 		if (args.containsKey(TiC.PROPERTY_SOUND)){
 			notificationSound = TiConvert.toString(args, TiC.PROPERTY_SOUND);
 		}
+		
+		if (args.containsKey("rootActivity")){
+			rootActivityClassName = TiConvert.toString(args, "rootActivity");
+		}
 
 		Intent intent = new Intent(TiApplication.getInstance().getApplicationContext(), AlarmNotificationListener.class);
 		//Add some extra information so when the alarm goes off we have enough to create the notification

@@ -7,7 +7,7 @@
 <h2>Before you start</h2>
 
 <ul>
-<li>This is an Android module designed to work with Titanium SDK 1.8.2 or greater.</li>
+<li>This is an Android module designed to work with Titanium SDK 3.2.0 or greater.</li>
 <li>Before getting start please note you need to compile this module yourself</li>
 </ul>
 
@@ -68,20 +68,22 @@ var alarmManager = require('bencoding.alarmmanager').createAlarmManager();
 <p>The addAlarmNotification allows you to schedule an Alarm that will then create an notification.</p>
 
 <p>You can create an AlarmNotification using the below properties:
-* <b>requestCode</b> (Optional) (int) ID for the specific alarm being created. If the requestCode, it will update the saved alarm
-* <b>second</b> - (Required) (int) The second of the start time. 
-* <b>minute</b> - (Required) (int) The minute of the start time. 
-* <b>hour</b> - (Optional) (int) The hour you want to start the alarm
-* <b>day</b> - (Optional) (int) The day you want to start the alarm
-* <b>month</b> - (Optional) (int) The month you want to start the alarm
-* <b>year</b> - (Optional) (int) The year you want to start the alarm
-* <b>contentTitle</b> - (Required) (string) The title of the notification
-* <b>contentText</b> - (Required) (string) The text of the notification
-* <b>playSound</b> (Optional) (bool) Play the default notification sound when alarm triggered. 
-* <b>vibrate</b> (Optional) (bool) Vibrate the device on notification. Please note this requires the vibrate permission.
-* <b>showLights</b> (Optional) (bool) Activate notification lights on device when alarm triggered.
-* <b>icon</b> - (Optional)The icon of the notification, this can be a system icon or resource included path
-* <b>repeat</b> - (Optional) (int) Used to schedule a repeating alarm. You can provide a millisecond value or use the words hourly, daily, monthly, yearly.</p>
+<ul>
+<li><b>requestCode</b> (Optional) (int) ID for the specific alarm being created. If the requestCode, it will update the saved alarm</li>
+<li><b>second</b> - (Required) (int) The second of the start time. </li>
+<li><b>minute</b> - (Required) (int) The minute of the start time. </li>
+<li><b>hour</b> - (Optional) (int) The hour you want to start the alarm</li>
+<li><b>day</b> - (Optional) (int) The day you want to start the alarm</li>
+<li><b>month</b> - (Optional) (int) The month you want to start the alarm</li>
+<li><b>year</b> - (Optional) (int) The year you want to start the alarm</li>
+<li><b>contentTitle</b> - (Required) (string) The title of the notification</li>
+<li><b>contentText</b> - (Required) (string) The text of the notification</li>
+<li><b>playSound</b> (Optional) (bool) Play the default notification sound when alarm triggered. </li>
+<li><b>vibrate</b> (Optional) (bool) Vibrate the device on notification. Please note this requires the vibrate permission.</li>
+<li><b>showLights</b> (Optional) (bool) Activate notification lights on device when alarm triggered.</li>
+<li><b>icon</b> - (Optional)The icon of the notification, this can be a system icon or resource included path</li>
+<li><b>repeat</b> - (Optional) (int) Used to schedule a repeating alarm. You can provide a millisecond value or use the words hourly, daily, monthly, yearly.</li>
+<li><b>rootActivity</b> - (Optional) (string) Used to specify to which activity (which name is concatenation id from tiapp.xml with the name of activity from manifest file) routes your notification. Using of this property resolves bug: "No valid root or current activity found for application instance"</li></ul></p>
 
 <p>Please note if you omit the day, month, and year parameters the module will assume you mean to make the alarm effective from the current time If second is provided, alarm will be set to now plus the number of seconds provided; if minute is provided, alarm will be set for now plus the number of minutes provided.</p>
 
