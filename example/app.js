@@ -7,6 +7,8 @@ var sound = Titanium.Media.createSound();
 
 //Bring in the module
 var alarmModule = require('bencoding.alarmmanager');
+//For debug purposes:
+alarmModule.enableLogging();
 //Create a new instance of the Alarm Manager
 var alarmManager = alarmModule.createAlarmManager();
 //Create our basic window to put our example buttons on
@@ -95,7 +97,9 @@ btn4.addEventListener('click',function(e){
 		minute: now.getMinutes() + 2, //Set the number of minutes until the alarm should go off
 		contentTitle:'Alarm #4', //Set the title of the Notification that will appear
 		contentText:'Alarm & Notify Scheduled Repeat', //Set the body of the notification that will apear
-		repeat:'daily' //You can use the words hourly,daily,weekly,monthly,yearly or you can provide milliseconds.
+		repeat:'daily', //You can use the words hourly,daily,weekly,monthly,yearly or you can provide milliseconds.
+		rootActivity:'com.appworkbench.alarmtest.AlarmtestActivity' //You can specify ro which rootActivity notification rootes
+		//it resolves bug with: 'No valid root or current activity found for application instance'
 	});	
 	var ew = Ti.UI.createAlertDialog({
 		title:'Info', message:"You should see your alarm notification in about 2 minutes & repeat each day",

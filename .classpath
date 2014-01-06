@@ -2,15 +2,15 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="build/.apt_generated"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="src" path=".apt_generated">
 		<attributes>
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Soh Thiam Hing/AppData/Roaming/Titanium/mobilesdk/win32/3.1.2.GA/android/kroll-apt.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Soh Thiam Hing/AppData/Roaming/Titanium/mobilesdk/win32/3.1.2.GA/android/kroll-common.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Soh Thiam Hing/AppData/Roaming/Titanium/mobilesdk/win32/3.1.2.GA/android/titanium.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Soh Thiam Hing/adt-bundle-windows-x86_64/sdk/platforms/android-10/android.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Hasan/AppData/Roaming/Titanium/mobilesdk/win32/3.2.0.GA/android/kroll-apt.jar" sourcepath="D:/Titanium_Tools/kroll-apt.zip"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Hasan/AppData/Roaming/Titanium/mobilesdk/win32/3.2.0.GA/android/kroll-common.jar" sourcepath="D:/Titanium_Tools/kroll-common.zip"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Hasan/AppData/Roaming/Titanium/mobilesdk/win32/3.2.0.GA/android/titanium.jar" sourcepath="D:/Titanium_Tools/titanium.zip"/>
+	<classpathentry exported="true" kind="lib" path="D:/AndroidTools/android-sdk/platforms/android-10/android.jar" sourcepath="D:/AndroidTools/android-sdk/sources/android-4.1.2_r1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
